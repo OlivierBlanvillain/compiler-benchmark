@@ -12,9 +12,20 @@ import org.openjdk.jmh.annotations.Mode._
 import org.openjdk.jmh.annotations._
 
 import scala.collection.JavaConverters._
+import scala.tools.benchmark.BenchmarkDriver
+
+trait BaseBenchmarkDriver {
+  def source: String
+  def extraArgs: String
+  def corpusVersion: String
+  def depsClasspath: String
+  def tempDir: File
+  def corpusSourcePath: Path
+  def compilerArgs: Array[String]
+}
 
 @State(Scope.Benchmark)
-class ScalacBenchmark {
+class ScalacBenchmark extends BenchmarkDriver {
   @Param(value = Array())
   var source: String = _
 
@@ -26,53 +37,20 @@ class ScalacBenchmark {
   @Param(value = Array("latest"))
   var corpusVersion: String = _
 
-  var driver: Driver = _
-
   var depsClasspath: String = _
 
-  def compileImpl(): Unit = {
-    val compilerArgs =
-      if (source.startsWith("@")) Array(source)
-      else {
-        import scala.collection.JavaConverters._
-        val allFiles = Files.walk(findSourceDir, FileVisitOption.FOLLOW_LINKS).collect(Collectors.toList[Path]).asScala.toList
-        allFiles.filter(f => {
-          val name = f.getFileName.toString
-          name.endsWith(".scala") || name.endsWith(".java")
-        }).map(_.toAbsolutePath.normalize.toString).toArray
-      }
-
-    // MainClass is copy-pasted from compiler for source compatibility with 2.10.x - 2.13.x
-    class MainClass extends Driver with EvalLoop {
-      def resident(compiler: Global): Unit = loop { line =>
-        val command = new CompilerCommand(line split "\\s+" toList, new Settings(scalacError))
-        compiler.reporter.reset()
-        new compiler.Run() compile command.files
-      }
-
-      override def newCompiler(): Global = Global(settings, reporter)
-
-      override protected def processSettingsHook(): Boolean = {
-        if (source == "scala")
-          settings.sourcepath.value = Paths.get(s"../corpus/$source/$corpusVersion/library").toAbsolutePath.normalize.toString
-        else
-          settings.usejavacp.value = true
-        settings.outdir.value = tempDir.getAbsolutePath
-        settings.nowarn.value = true
-        if (depsClasspath != null)
-          settings.processArgumentString(s"-cp $depsClasspath")
-        if (extraArgs != null && extraArgs != "")
-          settings.processArgumentString(extraArgs)
-        true
-      }
+  def compilerArgs =
+    if (source.startsWith("@")) Array(source)
+    else {
+      import scala.collection.JavaConverters._
+      val allFiles = Files.walk(findSourceDir).collect(Collectors.toList[Path]).asScala.toList
+      allFiles.filter(f => {
+        val name = f.getFileName.toString
+        name.endsWith(".scala") || name.endsWith(".java")
+      }).map(_.toAbsolutePath.normalize.toString).toArray
     }
-    val driver = new MainClass
 
-    driver.process(compilerArgs)
-    assert(!driver.reporter.hasErrors)
-  }
-
-  private var tempDir: File = null
+  var tempDir: File = null
 
   // Executed once per fork
   @Setup(Level.Trial) def initTemp(): Unit = {
@@ -95,7 +73,7 @@ class ScalacBenchmark {
     })
   }
 
-  private def corpusSourcePath = Paths.get(s"../corpus/$source/$corpusVersion")
+  def corpusSourcePath: Path = Paths.get(s"../corpus/$source/$corpusVersion")
 
   @Setup(Level.Trial) def initDepsClasspath(): Unit = {
     val depsDir = Paths.get(ConfigFactory.load.getString("deps.localdir"))
@@ -158,6 +136,8 @@ class ColdScalacBenchmark extends ScalacBenchmark {
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Warmup(iterations = 0)
 @Measurement(iterations = 1, time = 30, timeUnit = TimeUnit.SECONDS)
+// @Fork triggers match error in dotty, see https://github.com/lampepfl/dotty/issues/2704
+// Comment out `@Fork` to run compilation/test with Dotty or wait for that issue to be fixed.
 @Fork(value = 3, jvmArgs = Array("-Xms2G", "-Xmx2G"))
 class WarmScalacBenchmark extends ScalacBenchmark {
   @Benchmark
