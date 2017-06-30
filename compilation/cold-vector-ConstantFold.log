@@ -1,0 +1,115 @@
+# JMH version: 1.19
+# VM version: JDK 1.8.0_131, VM 25.131-b11
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -DscalaVersion=0.2.0-bin-20170629-2ad686c-NIGHTLY -DscalaRef=20170629
+# Warmup: <none>
+# Measurement: 1 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: scala.tools.nsc.ColdScalacBenchmark.compile
+# Parameters: (corpusVersion = latest, extraArgs = , source = vector)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 16
+Iteration   1: 3495.516 ms/op
+
+# Run progress: 6.25% complete, ETA 00:00:57
+# Fork: 2 of 16
+Iteration   1: 3353.523 ms/op
+
+# Run progress: 12.50% complete, ETA 00:00:53
+# Fork: 3 of 16
+Iteration   1: 3577.368 ms/op
+
+# Run progress: 18.75% complete, ETA 00:00:49
+# Fork: 4 of 16
+Iteration   1: 3487.481 ms/op
+
+# Run progress: 25.00% complete, ETA 00:00:46
+# Fork: 5 of 16
+Iteration   1: 3334.906 ms/op
+
+# Run progress: 31.25% complete, ETA 00:00:41
+# Fork: 6 of 16
+Iteration   1: 3438.211 ms/op
+
+# Run progress: 37.50% complete, ETA 00:00:38
+# Fork: 7 of 16
+Iteration   1: 3370.555 ms/op
+
+# Run progress: 43.75% complete, ETA 00:00:34
+# Fork: 8 of 16
+Iteration   1: 3353.556 ms/op
+
+# Run progress: 50.00% complete, ETA 00:00:30
+# Fork: 9 of 16
+Iteration   1: 3367.248 ms/op
+
+# Run progress: 56.25% complete, ETA 00:00:26
+# Fork: 10 of 16
+Iteration   1: 3465.448 ms/op
+
+# Run progress: 62.50% complete, ETA 00:00:22
+# Fork: 11 of 16
+Iteration   1: 3534.016 ms/op
+
+# Run progress: 68.75% complete, ETA 00:00:19
+# Fork: 12 of 16
+Iteration   1: 3330.875 ms/op
+
+# Run progress: 75.00% complete, ETA 00:00:15
+# Fork: 13 of 16
+Iteration   1: 3336.212 ms/op
+
+# Run progress: 81.25% complete, ETA 00:00:11
+# Fork: 14 of 16
+Iteration   1: 3361.052 ms/op
+
+# Run progress: 87.50% complete, ETA 00:00:07
+# Fork: 15 of 16
+Iteration   1: 3295.910 ms/op
+
+# Run progress: 93.75% complete, ETA 00:00:03
+# Fork: 16 of 16
+Iteration   1: 3470.823 ms/op
+
+
+Result "scala.tools.nsc.ColdScalacBenchmark.compile":
+  N = 16
+  mean =   3410.794 ±(99.9%) 85.909 ms/op
+
+  Histogram, ms/op:
+    [3200.000, 3225.000) = 0 
+    [3225.000, 3250.000) = 0 
+    [3250.000, 3275.000) = 0 
+    [3275.000, 3300.000) = 1 
+    [3300.000, 3325.000) = 0 
+    [3325.000, 3350.000) = 3 
+    [3350.000, 3375.000) = 5 
+    [3375.000, 3400.000) = 0 
+    [3400.000, 3425.000) = 0 
+    [3425.000, 3450.000) = 1 
+    [3450.000, 3475.000) = 2 
+    [3475.000, 3500.000) = 2 
+    [3500.000, 3525.000) = 0 
+    [3525.000, 3550.000) = 1 
+    [3550.000, 3575.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   3295.910 ms/op
+     p(50.0000) =   3368.902 ms/op
+     p(90.0000) =   3547.021 ms/op
+     p(95.0000) =   3577.368 ms/op
+     p(99.0000) =   3577.368 ms/op
+     p(99.9000) =   3577.368 ms/op
+     p(99.9900) =   3577.368 ms/op
+     p(99.9990) =   3577.368 ms/op
+     p(99.9999) =   3577.368 ms/op
+    p(100.0000) =   3577.368 ms/op
+
+
+# Run complete. Total time: 00:01:00
+
+Benchmark                    (corpusVersion)  (extraArgs)  (source)  Mode  Cnt     Score    Error  Units
+ColdScalacBenchmark.compile           latest                 vector    ss   16  3410.794 ± 85.909  ms/op

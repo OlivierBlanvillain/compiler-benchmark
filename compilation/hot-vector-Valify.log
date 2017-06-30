@@ -1,0 +1,394 @@
+# JMH version: 1.19
+# VM version: JDK 1.8.0_131, VM 25.131-b11
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -DscalaVersion=0.2.0-bin-20170629-1ce9091-NIGHTLY -DscalaRef=20170629
+# Warmup: 10 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: scala.tools.nsc.HotScalacBenchmark.compile
+# Parameters: (corpusVersion = latest, extraArgs = , source = vector)
+
+# Run progress: 0.00% complete, ETA 00:10:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 788.448 ±(99.9%) 1015.688 ms/op
+# Warmup Iteration   2: 348.525 ±(99.9%) 18.647 ms/op
+# Warmup Iteration   3: 324.619 ±(99.9%) 12.897 ms/op
+# Warmup Iteration   4: 308.122 ±(99.9%) 8.151 ms/op
+# Warmup Iteration   5: 298.135 ±(99.9%) 5.061 ms/op
+# Warmup Iteration   6: 288.703 ±(99.9%) 3.036 ms/op
+# Warmup Iteration   7: 290.590 ±(99.9%) 4.980 ms/op
+# Warmup Iteration   8: 289.377 ±(99.9%) 5.569 ms/op
+# Warmup Iteration   9: 283.844 ±(99.9%) 2.434 ms/op
+# Warmup Iteration  10: 282.591 ±(99.9%) 2.384 ms/op
+Iteration   1: 283.509 ±(99.9%) 2.506 ms/op
+                 compile·p0.00:   278.397 ms/op
+                 compile·p0.50:   282.067 ms/op
+                 compile·p0.90:   289.564 ms/op
+                 compile·p0.95:   294.519 ms/op
+                 compile·p0.99:   296.747 ms/op
+                 compile·p0.999:  296.747 ms/op
+                 compile·p0.9999: 296.747 ms/op
+                 compile·p1.00:   296.747 ms/op
+
+Iteration   2: 282.140 ±(99.9%) 4.596 ms/op
+                 compile·p0.00:   276.300 ms/op
+                 compile·p0.50:   280.494 ms/op
+                 compile·p0.90:   287.991 ms/op
+                 compile·p0.95:   296.878 ms/op
+                 compile·p0.99:   321.389 ms/op
+                 compile·p0.999:  321.389 ms/op
+                 compile·p0.9999: 321.389 ms/op
+                 compile·p1.00:   321.389 ms/op
+
+Iteration   3: 280.276 ±(99.9%) 1.798 ms/op
+                 compile·p0.00:   276.824 ms/op
+                 compile·p0.50:   279.183 ms/op
+                 compile·p0.90:   284.846 ms/op
+                 compile·p0.95:   287.467 ms/op
+                 compile·p0.99:   288.358 ms/op
+                 compile·p0.999:  288.358 ms/op
+                 compile·p0.9999: 288.358 ms/op
+                 compile·p1.00:   288.358 ms/op
+
+Iteration   4: 280.072 ±(99.9%) 1.544 ms/op
+                 compile·p0.00:   275.775 ms/op
+                 compile·p0.50:   279.970 ms/op
+                 compile·p0.90:   284.321 ms/op
+                 compile·p0.95:   284.846 ms/op
+                 compile·p0.99:   285.737 ms/op
+                 compile·p0.999:  285.737 ms/op
+                 compile·p0.9999: 285.737 ms/op
+                 compile·p1.00:   285.737 ms/op
+
+Iteration   5: 279.708 ±(99.9%) 2.299 ms/op
+                 compile·p0.00:   275.775 ms/op
+                 compile·p0.50:   278.397 ms/op
+                 compile·p0.90:   286.943 ms/op
+                 compile·p0.95:   289.486 ms/op
+                 compile·p0.99:   289.931 ms/op
+                 compile·p0.999:  289.931 ms/op
+                 compile·p0.9999: 289.931 ms/op
+                 compile·p1.00:   289.931 ms/op
+
+Iteration   6: 278.994 ±(99.9%) 2.277 ms/op
+                 compile·p0.00:   275.775 ms/op
+                 compile·p0.50:   277.348 ms/op
+                 compile·p0.90:   285.737 ms/op
+                 compile·p0.95:   289.119 ms/op
+                 compile·p0.99:   290.456 ms/op
+                 compile·p0.999:  290.456 ms/op
+                 compile·p0.9999: 290.456 ms/op
+                 compile·p1.00:   290.456 ms/op
+
+Iteration   7: 277.858 ±(99.9%) 2.172 ms/op
+                 compile·p0.00:   274.203 ms/op
+                 compile·p0.50:   276.300 ms/op
+                 compile·p0.90:   283.954 ms/op
+                 compile·p0.95:   286.654 ms/op
+                 compile·p0.99:   288.883 ms/op
+                 compile·p0.999:  288.883 ms/op
+                 compile·p0.9999: 288.883 ms/op
+                 compile·p1.00:   288.883 ms/op
+
+Iteration   8: 280.421 ±(99.9%) 5.123 ms/op
+                 compile·p0.00:   275.251 ms/op
+                 compile·p0.50:   277.348 ms/op
+                 compile·p0.90:   285.632 ms/op
+                 compile·p0.95:   308.806 ms/op
+                 compile·p0.99:   317.719 ms/op
+                 compile·p0.999:  317.719 ms/op
+                 compile·p0.9999: 317.719 ms/op
+                 compile·p1.00:   317.719 ms/op
+
+Iteration   9: 278.077 ±(99.9%) 1.632 ms/op
+                 compile·p0.00:   275.251 ms/op
+                 compile·p0.50:   277.348 ms/op
+                 compile·p0.90:   281.490 ms/op
+                 compile·p0.95:   283.902 ms/op
+                 compile·p0.99:   288.358 ms/op
+                 compile·p0.999:  288.358 ms/op
+                 compile·p0.9999: 288.358 ms/op
+                 compile·p1.00:   288.358 ms/op
+
+Iteration  10: 277.756 ±(99.9%) 1.772 ms/op
+                 compile·p0.00:   273.678 ms/op
+                 compile·p0.50:   276.562 ms/op
+                 compile·p0.90:   282.749 ms/op
+                 compile·p0.95:   285.291 ms/op
+                 compile·p0.99:   285.737 ms/op
+                 compile·p0.999:  285.737 ms/op
+                 compile·p0.9999: 285.737 ms/op
+                 compile·p1.00:   285.737 ms/op
+
+
+# Run progress: 33.33% complete, ETA 00:06:45
+# Fork: 2 of 3
+# Warmup Iteration   1: 780.423 ±(99.9%) 926.540 ms/op
+# Warmup Iteration   2: 340.805 ±(99.9%) 17.573 ms/op
+# Warmup Iteration   3: 298.428 ±(99.9%) 5.071 ms/op
+# Warmup Iteration   4: 286.741 ±(99.9%) 2.608 ms/op
+# Warmup Iteration   5: 284.732 ±(99.9%) 2.830 ms/op
+# Warmup Iteration   6: 281.601 ±(99.9%) 3.108 ms/op
+# Warmup Iteration   7: 280.174 ±(99.9%) 2.453 ms/op
+# Warmup Iteration   8: 279.009 ±(99.9%) 2.478 ms/op
+# Warmup Iteration   9: 278.746 ±(99.9%) 2.264 ms/op
+# Warmup Iteration  10: 277.771 ±(99.9%) 2.328 ms/op
+Iteration   1: 277.122 ±(99.9%) 2.529 ms/op
+                 compile·p0.00:   273.154 ms/op
+                 compile·p0.50:   275.251 ms/op
+                 compile·p0.90:   284.584 ms/op
+                 compile·p0.95:   286.943 ms/op
+                 compile·p0.99:   293.077 ms/op
+                 compile·p0.999:  293.077 ms/op
+                 compile·p0.9999: 293.077 ms/op
+                 compile·p1.00:   293.077 ms/op
+
+Iteration   2: 277.136 ±(99.9%) 2.231 ms/op
+                 compile·p0.00:   272.630 ms/op
+                 compile·p0.50:   276.300 ms/op
+                 compile·p0.90:   283.220 ms/op
+                 compile·p0.95:   285.842 ms/op
+                 compile·p0.99:   291.504 ms/op
+                 compile·p0.999:  291.504 ms/op
+                 compile·p0.9999: 291.504 ms/op
+                 compile·p1.00:   291.504 ms/op
+
+Iteration   3: 275.110 ±(99.9%) 1.143 ms/op
+                 compile·p0.00:   272.630 ms/op
+                 compile·p0.50:   274.727 ms/op
+                 compile·p0.90:   278.187 ms/op
+                 compile·p0.95:   280.022 ms/op
+                 compile·p0.99:   280.494 ms/op
+                 compile·p0.999:  280.494 ms/op
+                 compile·p0.9999: 280.494 ms/op
+                 compile·p1.00:   280.494 ms/op
+
+Iteration   4: 274.911 ±(99.9%) 2.444 ms/op
+                 compile·p0.00:   271.057 ms/op
+                 compile·p0.50:   273.154 ms/op
+                 compile·p0.90:   281.228 ms/op
+                 compile·p0.95:   286.052 ms/op
+                 compile·p0.99:   288.883 ms/op
+                 compile·p0.999:  288.883 ms/op
+                 compile·p0.9999: 288.883 ms/op
+                 compile·p1.00:   288.883 ms/op
+
+Iteration   5: 275.804 ±(99.9%) 2.556 ms/op
+                 compile·p0.00:   272.105 ms/op
+                 compile·p0.50:   274.203 ms/op
+                 compile·p0.90:   279.760 ms/op
+                 compile·p0.95:   284.007 ms/op
+                 compile·p0.99:   296.747 ms/op
+                 compile·p0.999:  296.747 ms/op
+                 compile·p0.9999: 296.747 ms/op
+                 compile·p1.00:   296.747 ms/op
+
+Iteration   6: 274.713 ±(99.9%) 3.383 ms/op
+                 compile·p0.00:   270.533 ms/op
+                 compile·p0.50:   272.630 ms/op
+                 compile·p0.90:   283.745 ms/op
+                 compile·p0.95:   289.669 ms/op
+                 compile·p0.99:   296.747 ms/op
+                 compile·p0.999:  296.747 ms/op
+                 compile·p0.9999: 296.747 ms/op
+                 compile·p1.00:   296.747 ms/op
+
+Iteration   7: 275.237 ±(99.9%) 2.287 ms/op
+                 compile·p0.00:   271.057 ms/op
+                 compile·p0.50:   273.678 ms/op
+                 compile·p0.90:   282.172 ms/op
+                 compile·p0.95:   285.160 ms/op
+                 compile·p0.99:   289.407 ms/op
+                 compile·p0.999:  289.407 ms/op
+                 compile·p0.9999: 289.407 ms/op
+                 compile·p1.00:   289.407 ms/op
+
+Iteration   8: 274.939 ±(99.9%) 1.919 ms/op
+                 compile·p0.00:   272.105 ms/op
+                 compile·p0.50:   273.678 ms/op
+                 compile·p0.90:   281.648 ms/op
+                 compile·p0.95:   282.696 ms/op
+                 compile·p0.99:   283.640 ms/op
+                 compile·p0.999:  283.640 ms/op
+                 compile·p0.9999: 283.640 ms/op
+                 compile·p1.00:   283.640 ms/op
+
+Iteration   9: 274.529 ±(99.9%) 1.789 ms/op
+                 compile·p0.00:   270.533 ms/op
+                 compile·p0.50:   273.678 ms/op
+                 compile·p0.90:   279.341 ms/op
+                 compile·p0.95:   281.281 ms/op
+                 compile·p0.99:   283.640 ms/op
+                 compile·p0.999:  283.640 ms/op
+                 compile·p0.9999: 283.640 ms/op
+                 compile·p1.00:   283.640 ms/op
+
+Iteration  10: 273.721 ±(99.9%) 1.829 ms/op
+                 compile·p0.00:   270.533 ms/op
+                 compile·p0.50:   272.105 ms/op
+                 compile·p0.90:   278.607 ms/op
+                 compile·p0.95:   281.228 ms/op
+                 compile·p0.99:   283.116 ms/op
+                 compile·p0.999:  283.116 ms/op
+                 compile·p0.9999: 283.116 ms/op
+                 compile·p1.00:   283.116 ms/op
+
+
+# Run progress: 66.67% complete, ETA 00:03:23
+# Fork: 3 of 3
+# Warmup Iteration   1: 794.740 ±(99.9%) 987.045 ms/op
+# Warmup Iteration   2: 340.840 ±(99.9%) 18.821 ms/op
+# Warmup Iteration   3: 300.617 ±(99.9%) 4.275 ms/op
+# Warmup Iteration   4: 291.714 ±(99.9%) 3.473 ms/op
+# Warmup Iteration   5: 289.856 ±(99.9%) 3.519 ms/op
+# Warmup Iteration   6: 286.276 ±(99.9%) 2.517 ms/op
+# Warmup Iteration   7: 285.977 ±(99.9%) 3.072 ms/op
+# Warmup Iteration   8: 283.771 ±(99.9%) 2.150 ms/op
+# Warmup Iteration   9: 283.756 ±(99.9%) 2.340 ms/op
+# Warmup Iteration  10: 282.926 ±(99.9%) 2.332 ms/op
+Iteration   1: 281.790 ±(99.9%) 1.729 ms/op
+                 compile·p0.00:   278.921 ms/op
+                 compile·p0.50:   281.018 ms/op
+                 compile·p0.90:   287.415 ms/op
+                 compile·p0.95:   289.931 ms/op
+                 compile·p0.99:   289.931 ms/op
+                 compile·p0.999:  289.931 ms/op
+                 compile·p0.9999: 289.931 ms/op
+                 compile·p1.00:   289.931 ms/op
+
+Iteration   2: 281.834 ±(99.9%) 1.871 ms/op
+                 compile·p0.00:   277.873 ms/op
+                 compile·p0.50:   281.018 ms/op
+                 compile·p0.90:   287.991 ms/op
+                 compile·p0.95:   289.486 ms/op
+                 compile·p0.99:   289.931 ms/op
+                 compile·p0.999:  289.931 ms/op
+                 compile·p0.9999: 289.931 ms/op
+                 compile·p1.00:   289.931 ms/op
+
+Iteration   3: 280.814 ±(99.9%) 2.668 ms/op
+                 compile·p0.00:   276.824 ms/op
+                 compile·p0.50:   278.921 ms/op
+                 compile·p0.90:   286.052 ms/op
+                 compile·p0.95:   293.942 ms/op
+                 compile·p0.99:   298.844 ms/op
+                 compile·p0.999:  298.844 ms/op
+                 compile·p0.9999: 298.844 ms/op
+                 compile·p1.00:   298.844 ms/op
+
+Iteration   4: 282.227 ±(99.9%) 2.625 ms/op
+                 compile·p0.00:   276.824 ms/op
+                 compile·p0.50:   280.756 ms/op
+                 compile·p0.90:   287.782 ms/op
+                 compile·p0.95:   292.684 ms/op
+                 compile·p0.99:   299.368 ms/op
+                 compile·p0.999:  299.368 ms/op
+                 compile·p0.9999: 299.368 ms/op
+                 compile·p1.00:   299.368 ms/op
+
+Iteration   5: 280.538 ±(99.9%) 1.516 ms/op
+                 compile·p0.00:   277.348 ms/op
+                 compile·p0.50:   279.446 ms/op
+                 compile·p0.90:   284.321 ms/op
+                 compile·p0.95:   285.291 ms/op
+                 compile·p0.99:   285.737 ms/op
+                 compile·p0.999:  285.737 ms/op
+                 compile·p0.9999: 285.737 ms/op
+                 compile·p1.00:   285.737 ms/op
+
+Iteration   6: 281.091 ±(99.9%) 3.678 ms/op
+                 compile·p0.00:   276.300 ms/op
+                 compile·p0.50:   278.397 ms/op
+                 compile·p0.90:   288.935 ms/op
+                 compile·p0.95:   299.919 ms/op
+                 compile·p0.99:   303.038 ms/op
+                 compile·p0.999:  303.038 ms/op
+                 compile·p0.9999: 303.038 ms/op
+                 compile·p1.00:   303.038 ms/op
+
+Iteration   7: 280.727 ±(99.9%) 2.999 ms/op
+                 compile·p0.00:   275.775 ms/op
+                 compile·p0.50:   278.659 ms/op
+                 compile·p0.90:   289.931 ms/op
+                 compile·p0.95:   293.313 ms/op
+                 compile·p0.99:   294.650 ms/op
+                 compile·p0.999:  294.650 ms/op
+                 compile·p0.9999: 294.650 ms/op
+                 compile·p1.00:   294.650 ms/op
+
+Iteration   8: 282.431 ±(99.9%) 4.873 ms/op
+                 compile·p0.00:   276.300 ms/op
+                 compile·p0.50:   278.397 ms/op
+                 compile·p0.90:   299.526 ms/op
+                 compile·p0.95:   301.099 ms/op
+                 compile·p0.99:   301.990 ms/op
+                 compile·p0.999:  301.990 ms/op
+                 compile·p0.9999: 301.990 ms/op
+                 compile·p1.00:   301.990 ms/op
+
+Iteration   9: 279.052 ±(99.9%) 2.141 ms/op
+                 compile·p0.00:   275.775 ms/op
+                 compile·p0.50:   277.348 ms/op
+                 compile·p0.90:   286.786 ms/op
+                 compile·p0.95:   287.310 ms/op
+                 compile·p0.99:   287.310 ms/op
+                 compile·p0.999:  287.310 ms/op
+                 compile·p0.9999: 287.310 ms/op
+                 compile·p1.00:   287.310 ms/op
+
+Iteration  10: 278.834 ±(99.9%) 1.488 ms/op
+                 compile·p0.00:   276.300 ms/op
+                 compile·p0.50:   277.873 ms/op
+                 compile·p0.90:   282.224 ms/op
+                 compile·p0.95:   285.894 ms/op
+                 compile·p0.99:   286.786 ms/op
+                 compile·p0.999:  286.786 ms/op
+                 compile·p0.9999: 286.786 ms/op
+                 compile·p1.00:   286.786 ms/op
+
+
+
+Result "scala.tools.nsc.HotScalacBenchmark.compile":
+  N = 1090
+  mean =    278.681 ±(99.9%) 0.517 ms/op
+
+  Histogram, ms/op:
+    [270.000, 275.000) = 237 
+    [275.000, 280.000) = 536 
+    [280.000, 285.000) = 216 
+    [285.000, 290.000) = 74 
+    [290.000, 295.000) = 12 
+    [295.000, 300.000) = 9 
+    [300.000, 305.000) = 3 
+    [305.000, 310.000) = 1 
+    [310.000, 315.000) = 0 
+    [315.000, 320.000) = 1 
+    [320.000, 325.000) = 1 
+
+  Percentiles, ms/op:
+      p(0.0000) =    270.533 ms/op
+     p(50.0000) =    277.873 ms/op
+     p(90.0000) =    284.636 ms/op
+     p(95.0000) =    287.834 ms/op
+     p(99.0000) =    298.891 ms/op
+     p(99.9000) =    321.055 ms/op
+     p(99.9900) =    321.389 ms/op
+     p(99.9990) =    321.389 ms/op
+     p(99.9999) =    321.389 ms/op
+    p(100.0000) =    321.389 ms/op
+
+
+# Run complete. Total time: 00:10:09
+
+Benchmark                                   (corpusVersion)  (extraArgs)  (source)    Mode   Cnt    Score   Error  Units
+HotScalacBenchmark.compile                           latest                 vector  sample  1090  278.681 ± 0.517  ms/op
+HotScalacBenchmark.compile:compile·p0.00             latest                 vector  sample        270.533          ms/op
+HotScalacBenchmark.compile:compile·p0.50             latest                 vector  sample        277.873          ms/op
+HotScalacBenchmark.compile:compile·p0.90             latest                 vector  sample        284.636          ms/op
+HotScalacBenchmark.compile:compile·p0.95             latest                 vector  sample        287.834          ms/op
+HotScalacBenchmark.compile:compile·p0.99             latest                 vector  sample        298.891          ms/op
+HotScalacBenchmark.compile:compile·p0.999            latest                 vector  sample        321.055          ms/op
+HotScalacBenchmark.compile:compile·p0.9999           latest                 vector  sample        321.389          ms/op
+HotScalacBenchmark.compile:compile·p1.00             latest                 vector  sample        321.389          ms/op

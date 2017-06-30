@@ -1,0 +1,41 @@
+[0m[[0minfo[0m] [0mLoading global plugins from /home/olivier/dotfiles/core/.sbt/0.13/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/olivier/workspace/compiler-benchmark/project[0m
+[0m[[0minfo[0m] [0mSet current project to compiler-benchmark (in build file:/home/olivier/workspace/compiler-benchmark/)[0m
+[0m[[0minfo[0m] [0mSetting version to 0.2.0-bin-20170629-07cb77a-NIGHTLY[0m
+[0m[[0minfo[0m] [0mReapplying settings...[0m
+[0m[[0minfo[0m] [0mSet current project to compiler-benchmark (in build file:/home/olivier/workspace/compiler-benchmark/)[0m
+Processing 30 classes from /home/olivier/workspace/compiler-benchmark/compilation/target/scala-0.2/classes with "reflection" generator
+Writing out Java source to /home/olivier/workspace/compiler-benchmark/compilation/target/scala-0.2/src_managed/jmh and resources to /home/olivier/workspace/compiler-benchmark/compilation/target/scala-0.2/resource_managed/jmh
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mthere were 1 migration warning(s); re-run with -migration for details[0m
+[0m[[32msuccess[0m] [0mTotal time: 64 s, completed Jun 29, 2017 5:44:25 PM[0m
